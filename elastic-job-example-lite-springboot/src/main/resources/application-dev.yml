@@ -1,6 +1,16 @@
 spring:
   datasource:
-    url: jdbc:h2:mem:job_event_storage
-    driver-class-name: org.h2.Driver
-    username: sa
-    password:
+    url: jdbc:mysql://192.168.20.39:3306/elastic-job?useUnicode=true&characterEncoding=utf-8&verifyServerCertificate=false&useSSL=false&requireSSL=false
+    driver-class-name: com.mysql.jdbc.Driver
+    username: jv_init
+    password: uvZe^n#MHfl94mZt
+    tomcat:
+      max-wait: 10000
+      min-idle: 0
+      initial-size: 25
+      validation-query: SELECT 1
+      test-on-borrow: false
+      test-while-idle: true
+      time-between-eviction-runs-millis: 18800
+      remove-abandoned: true
+      remove-abandoned-timeout: 180
